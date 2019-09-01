@@ -1,13 +1,25 @@
+@font-face {
+  font-family: "HurmeGeometric";
+  src: url("/src/components/assets/Fonts/HurmeGeometric/HurmeGeometricSans3\ SemiBold.otf");
+}
+
 body {
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: "HurmeGeometric", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('./components/assets/img/Fondo_Kapta/Fondo01.png') no-repeat center center;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#root {
+  height: 100%;
 }

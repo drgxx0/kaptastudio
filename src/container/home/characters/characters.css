@@ -1,0 +1,14 @@
+
+
+.character {
+    height: 100% !important; 
+}
+
+
+@media (max-width: 768px) {
+    .character {
+        height: 50% !important;
+        top: auto;
+        bottom: 0px;
+    }
+}

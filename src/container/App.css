@@ -1,0 +1,353 @@
+.arco-superior {
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    height: 1000px;
+    width: 100%;
+}
+
+.kh-logo-container img {
+    height: 400px;
+}
+
+
+@media (max-width: 768px) {
+    /* mobile-kw */
+    .arco-superior {
+        position: absolute;
+        z-index: -10;
+        top: 25%;
+        left: 0;
+        height: 100%;
+    }
+    
+    .knowhow {
+        display: grid;
+        grid-template-rows: 2fr 1fr 1fr; 
+        justify-content: center;
+        padding-top: 50px;
+        height: 100vh;
+    }
+
+    .kh-logo-container {
+        display: grid;
+        grid-template-rows: 3fr 1fr;
+        grid-template-columns: 1fr;
+        align-items: center;
+        width: auto;
+    }
+
+    .kh-logo-container .iso {
+        display: flex;
+        justify-self: center;
+        align-self: flex-end;
+        height: 50%;
+    }
+
+    .kh-logo-container .kh-logo {
+        display: flex;
+        justify-self: center;
+        align-self: flex-end;
+        height: 2em;
+    }
+
+    .kh-texto {
+        padding: 20px;
+        text-align: center;
+        font-size: .9em;
+        color: #FFC9A2;
+    }
+
+    .kh-image {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: auto auto repeat(5, 50px) auto auto;
+        grid-template-areas: ". . b1 b2 b3 b4 b5 . .";
+        position: relative;
+        top: 80%;
+        z-index: -1;
+    }
+
+    .b1 {
+        grid-area: b1;
+        display: flex;
+        justify-self: flex-end;
+        align-self: flex-end;
+    }
+
+    .b2 {
+        grid-area: b2;
+        display: flex;
+        justify-self: flex-start;
+        align-self: flex-end;
+    }
+
+    .b3 {
+        grid-area: b3;
+        display: flex;
+        justify-self: flex-end;
+        align-self: flex-end;
+    }
+
+    .b4 {
+        grid-area: b4;
+        display: flex;
+        justify-self: flex-start;
+        align-self: flex-end;
+    }
+
+    .b5 {
+        grid-area: b5;
+        display: flex;
+        justify-self: flex-end;
+        align-self: flex-end;
+    }
+
+    .kh-image img {
+        height: 150px;
+        width: auto;
+    }
+
+    /* mobile-team */
+
+    .team {
+        display: grid;
+        grid-auto-rows: 70% 1fr;
+        background: url('../components/assets/img/Fondo_Kapta/Fondo03.png') no-repeat center center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%
+    }
+
+    .team-bg-form {
+        display: grid;
+        background: url('../components/assets/img/Fondo_Kapta/Fondo06.png') no-repeat center center;
+        background-size: cover;
+        height: 50vh;
+        align-self: end;
+        align-items: center;
+    }
+
+    .team-image {
+        display: flex;
+        height: 70%;
+        justify-self: center;
+    }
+
+    .team-text-container {
+        display: flex;
+        align-self: center;
+    }
+
+    .team-text-container p {
+        text-align: center;
+        font-size: .9em;
+        color: #FFC9A2;
+    }
+
+    /* mobile-work */
+    .work {
+        display: grid;
+        grid-template-rows: 150px 100px 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "wk-logo"
+        "button"
+        "info";
+        height: 100%;
+    }
+
+    .work-logo {
+        grid-area: wk-logo;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .work-logo img {
+        width: 50%;
+        height: 50%;
+    }
+
+    .work-buttons {
+        grid-area: button;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .work-buttons img {
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .bd {
+        display: flex;
+        align-self: flex-start;
+    }
+
+    .pk {
+        display: flex;
+        align-self: center;
+    }
+
+    .dg {
+        display: flex;
+        align-self: flex-end;
+    }
+
+    .pb {
+        display: flex;
+        align-self: center;
+    }
+
+    .sw {
+        display: flex;
+        align-self: flex-start;
+    }
+
+    .wk-active {
+        box-shadow: 0px 0px 5px #fff;
+        border-radius: 50%;
+    }
+    
+
+    .work-info {
+        grid-area: info;
+        display: grid;
+        height: 100%;
+        grid-template-columns: 10% 40% 50%;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        ". diag info-img"
+        "bg-img diag info-img";
+        align-content: end;
+    }
+
+    .work-bg-img {
+        display: flex;
+        align-self: flex-start;
+        grid-area: bg-img;
+        height: 150px;
+    }
+
+    .globo {
+        position: relative;
+        left: 50%;
+        background: url('../components/assets/img/Work_Cambios_Iconos_Ruleta/Globo_Viñeta.png') no-repeat center center;
+        background-size: contain;
+        grid-area: diag;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .globo p {
+        font-size: 0.8rem;
+        transform: rotate(-10deg);
+        color: white;
+        width: 50%;
+    }
+
+    .globo img {
+        width: 100%;
+    }
+
+    .work-info-personaje {
+        grid-area: info-img;
+        display: flex;
+        align-content: flex-end;
+        padding: 0px;
+    }
+
+    .work-info-personaje img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .wk-projects {
+        position: relative;
+        top: -2em;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: url('../components/assets/img/Fondo_Kapta/Fondo05.png') no-repeat center center;
+        background-size: cover;
+        height: 100%;
+        padding: 5em 10px 80% 10px;
+    }
+
+    .wk-projects p {
+        text-align: center;
+        color: #FFC9A2;
+    }
+
+    .wk-projects .projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .wk-projects .projects img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: url('../components/assets/img/Fondo_Kapta/Fondo06.png') no-repeat center center;
+        background-size: cover;
+        height: 100%;
+        padding: 5em 10px;
+    }
+
+    .contact img {
+        width: 60%;
+    }
+
+    .contact p {
+        font-size: 1.1em;
+        color: black;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-rows: 100px 100px 100px;
+        justify-items: center;
+        background: url('../components/assets/img/Fondo_Kapta/Fondo01.png') no-repeat center center;
+        background-size: cover;
+    }
+
+    .footer img {
+        width: 50%;
+        height: auto;
+    }
+
+    .footer-text p {
+        text-align: center;
+        color: #FFC9A2;
+    }
+
+    .footer .social {
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-text {
+        text-align: center;
+        color: #FFC9A2;
+    }
+
+    .social img {
+        margin: 5px;
+        width: 15%;
+    }
+
+}
+

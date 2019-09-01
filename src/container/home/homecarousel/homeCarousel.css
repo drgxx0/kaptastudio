@@ -1,0 +1,67 @@
+.carousel .slide {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+    height: 100vh;
+    background: url('../../../components/assets/img/carrusel/bg.png') no-repeat center center;
+    background-size: cover;
+}
+
+.slide-container {
+    height: 100vh;
+}
+  
+  .each-fade .image-container img {
+    width: 100vw;
+    height: auto;
+  }
+
+  .react-slideshow-container + div.indicators {
+      margin-top: -60px;
+  }
+
+  .logo-mobile {
+      visibility: hidden;
+  }
+
+  @media (max-width: 768px) {
+      .container {
+          display: grid;
+          grid-template-rows: 100px 1fr auto;
+          grid-template-columns: 1fr;
+          width: 100%;
+          height: 100vh;
+          grid-template-areas:
+          "."
+          "logo"
+          "icons";
+          background: url('../../../components/assets/img/carrusel/fondo.png') no-repeat center center;
+          background-size: cover;
+          justify-content: center;
+      }
+
+      .slide-container {
+        grid-area: icons;
+        width: 100vw;
+        height: auto;
+    }
+
+      .logo-mobile {
+          display: flex;
+          justify-self: center;
+          align-self: center;
+          grid-area: logo;
+          visibility: visible;
+          height: 100px;
+      }
+
+      .each-fade .image-container img {
+        height: 350px;
+        width: auto;
+      }
+
+      .react-slideshow-container + div.indicators {
+        margin-top: 0px;
+    }
+  } 
