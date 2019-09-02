@@ -4,13 +4,34 @@ import NavBar from 'components/navbar/navbar';
 
 import Fade from 'react-reveal/Fade'
 
-import 'bulma/css/bulma.min.css'
 import './App.css'
+import Contact from './home/contact/contact';
 
 function App() {
 
-  const [worktype, setWorkType] = useState('Branding')
+  const [worktype, setWorkType] = useState('none')
   const [effect, setEffect] = useState()
+  const [mobile, setMobile] = useState(false)
+
+    useEffect(() => {
+        const onResize = () => {
+            if(window.outerWidth < 768) {
+                setMobile(true)
+            } else {
+                setMobile(false)
+            }
+        }
+        window.addEventListener('resize', onResize)
+        return () => window.removeEventListener('resize', onResize)
+    }, [])
+
+    useEffect(() => {
+        if(window.outerWidth < 768) {
+            setMobile(true)
+        } else {
+            setMobile(false)
+        }
+    }, [])
 
   useEffect(() => {
     if(!effect) {
@@ -79,14 +100,15 @@ function App() {
               Dispuestos a dar lo mejor para cualquier
               proyecto que esté en nuestras manos.
               </p>
-            </div>
+          </div>
         </div>
 
         {/*Work*/}
         <div className='work'>
-          <div className='work-logo'>
+          {mobile ? null : <img className='work-bg-img' src={require('components/assets/img/Fondo_Kapta/Fondo07.png')} alt='' />}
+          {mobile ? <div className='work-logo'>
             <img src={require('components/assets/img/Work/Work.png')} alt='' />
-          </div>
+          </div> : null}
           {/* <img className='work-info-img' src={require('components/assets/img/Work/Cabeza.png')} alt='' /> */}
           <div className='work-buttons'>
             <img className={worktype === 'Branding' ? 'wk-active bd' : 'bd'} src={require('components/assets/img/Work/Icon_Branding.png')} alt='' onClick={() => {
@@ -111,16 +133,37 @@ function App() {
               setEffect(false)
               }} />
           </div>
-          <div className='work-info'>
-            <img className='work-bg-img' src={require('components/assets/img/Fondo_Kapta/Fondo07.png')} alt='' />
+          <div className={worktype === 'none' || mobile ? 'work-info' : 'work-info-pe'}>
+          {mobile || worktype !== 'none' ? null : <img className='cabeza' src={require('components/assets/img/Work/Cabeza.png')} alt='' />}
+            {mobile ? <img className='work-bg-img' src={require('components/assets/img/Fondo_Kapta/Fondo07.png')} alt='' /> : null}
+              {mobile ? null : 
+              worktype === 'none' ? <div className='work-logo'>
+                <img src={require('components/assets/img/Work/Work.png')} alt='' />
+              </div> : null}
+              {mobile || worktype !== 'none' ? null : 
+              <div className='info-text'>
+                <p>
+                  En kapta te ayudaremos con las necesidades
+                  que tienes para cada proyecto,
+                  creando un plan estratégico personalizado,
+                  enfocándonos en tus objetivos y
+                  consiguiendo um diseño efectivo.
+                </p>
+              </div>}
+              {worktype === 'none' ? 
+              <div></div>
+              :
               <Fade when={effect}>
                <div className='globo'>
                   <p>Esto es un texto de prueba para ver como queda cada globo</p>
                </div>
-               </Fade>
+               </Fade>}
+               {worktype === 'none' ?
+               <div></div>
+               :
                <div className='work-info-personaje'>
                 <Fade right when={effect}><img src={require(`components/assets/img/Work_Cambios_Iconos_Ruleta/Personaje_${worktype}.png`)} alt='' /></Fade>
-               </div>
+               </div>}
           </div>
         </div>
 
@@ -142,64 +185,7 @@ function App() {
           </div>
         </div>
 
-        <div className='contact'>
-        <img src={require('components/assets/img/Contact/Contact.png')} alt='' />
-        <p>Ponte en contacto con nosotros</p>
-        <div class="field">
-          <label class="label">Nombre</label>
-          <div class="control">
-            <input class="input" type="text" />
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">E-mail</label>
-          <div class="control">
-            <input class="input" type="text" />
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">Teléfono</label>
-          <div class="control">
-            <input class="input" type="text" />
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">¿En qué podemos ayudarte?</label>
-          <div class="control">
-            <textarea class="textarea"></textarea>
-          </div>
-        </div>
-        <div class="field">
-          <label class="label">Servicio de tu interés</label>
-            <div class="control" style={{display: 'grid'}}>
-              <label class="radio">
-                <input type="radio" name="question" />
-                Branding
-              </label>
-              <label class="radio">
-                <input type="radio" name="question" />
-                Packaging
-              </label>
-              <label class="radio">
-                <input type="radio" name="question" />
-                Publicity
-              </label>
-              <label class="radio">
-                <input type="radio" name="question" />
-                Digital
-              </label>
-              <label class="radio">
-                <input type="radio" name="question" />
-                Software
-              </label>
-            </div>
-          </div>
-          <div class="field">
-            <div class="control">
-              <button class="button is-danger" style={{ color: '#FFC9A2' }}>Enviar</button>
-            </div>
-          </div>
-        </div>
+        <Contact />
         
         <div className='footer'>
           <img src={require('components/assets/img/Contact/Logo_Kapta.png')} alt='' />

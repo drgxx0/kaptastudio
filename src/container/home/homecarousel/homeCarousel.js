@@ -46,7 +46,7 @@ const HomeCarousel = ({ setCharacter, setEffect, effect }) => {
 
     return (
         <React.Fragment>
-            <div className='container'>
+            <div className='cr-container'>
                 {mobile ? 
                     <img className='logo-mobile' src={require("components/assets/img/carrusel/logo_kapta.png")} alt='' /> : null}
                 <div className="slide-container">

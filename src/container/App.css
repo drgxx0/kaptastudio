@@ -1,15 +1,335 @@
 .arco-superior {
-    position: absolute;
-    z-index: -10;
-    top: 0;
+    position: relative;
+    z-index: 1;
+    top: -10em;
     left: 0;
-    height: 1000px;
+    max-height: 400px;
     width: 100%;
 }
 
-.kh-logo-container img {
-    height: 400px;
+.knowhow {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; 
+    justify-content: center;
 }
+
+.kh-logo-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    width: auto;
+}
+
+.kh-logo-container .iso {
+    display: flex;
+    justify-self: center;
+    align-self: flex-end;
+    height: 50%;
+}
+
+.kh-logo-container .kh-logo {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    height: 6em;
+}
+
+.kh-texto {
+    display: flex;
+    justify-self: center;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    color: #FFC9A2;
+    width: 50%;
+}
+
+.kh-image {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto auto repeat(5, 100px) auto auto;
+    grid-template-areas: ". . b1 b2 b3 b4 b5 . .";
+}
+
+.b1 {
+    grid-area: b1;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.b2 {
+    grid-area: b2;
+    display: flex;
+    justify-self: flex-start;
+    align-self: flex-end;
+}
+
+.b3 {
+    grid-area: b3;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.b4 {
+    grid-area: b4;
+    display: flex;
+    justify-self: flex-start;
+    align-self: flex-end;
+}
+
+.b5 {
+    grid-area: b5;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.kh-image img {
+    height: 300px;
+    width: auto;
+}
+
+.team {
+    position: relative;
+    top: -28em;
+    display: grid;
+    z-index: 1;
+    grid-template-rows: 80% 300px;
+    background: url('../components/assets/img/Fondo_Kapta/Fondo03.png') no-repeat center;
+    background-size: cover;
+    height: 300vh;
+    align-items: start;
+}
+
+.team-bg-form {
+    position: relative;
+    top: 28em;
+    display: grid;
+    background: url('../components/assets/img/Fondo_Kapta/Fondo06.png') no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.team-image {
+    position: relative;
+    top: 10%;
+    display: flex;
+    width: 70%;
+    justify-self: center;
+}
+
+.team-text-container {
+    position: relative;
+    top: 25%;
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+}
+
+.team-text-container p {
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    font-size: 1.5em;
+    color: #FFC9A2;
+    width: 50%;
+    padding: 0px 20px;
+}
+
+.work {
+    position: relative;
+    top: -20em;
+    display: grid;
+    grid-template-rows: 400px;
+    grid-template-columns: 100px 1fr 50%;
+    grid-template-areas:
+    "bg-img button info";
+    width: 100%;
+    height: 50%;
+}
+
+.work-bg-img {
+    display: grid;
+    grid-area: bg-img;
+    height: 100%;
+    align-self: center;
+}
+
+.work-logo img {
+    width: 25%;
+    height: 25%;
+}
+
+.work-buttons {
+    position: relative;
+    left: 20%;
+    grid-area: button;
+    display: grid;
+    height: 100%;
+    width: 30%;
+    grid-gap: 30%;
+}
+
+.work-buttons img {
+    height: 60px;
+    cursor: pointer;
+}
+
+.bd {
+    display: flex;
+    justify-self: flex-start;
+}
+
+.pk {
+    display: flex;
+    justify-self: center;
+}
+
+.dg {
+    display: flex;
+    justify-self: flex-end;
+}
+
+.pb {
+    display: flex;
+    justify-self: center;
+}
+
+.sw {
+    display: flex;
+    justify-self: flex-start;
+}
+
+.wk-active {
+    box-shadow: 0px 0px 5px #fff;
+    border-radius: 50%;
+}
+
+.work-info {
+    grid-area: info;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr auto 20px;
+    grid-template-areas: 
+    "cabeza"
+    "wk-logo"
+    "info-text";
+}
+
+.work-info-pe {
+    grid-area: info;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "diag info-img";
+}
+
+.cabeza {
+    position: relative;
+    top: -25em;
+    left: 8em;
+    z-index: 0;
+    grid-area: cabeza;
+    height: 200%;
+}
+
+.info-text {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    grid-area: info-text;
+    padding: 30px;
+}
+
+.info-text p {
+    font-size: 1.2em;
+    color: #FFC9A2;
+    width: 50%;
+}
+
+.work-logo {
+    grid-area: wk-logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.globo {
+    position: relative;
+    background: url('../components/assets/img/Work_Cambios_Iconos_Ruleta/Globo_Viñeta.png') no-repeat center center;
+    background-size: contain;
+    grid-area: diag;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.globo p {
+    font-size: 2.1rem;
+    transform: rotate(-10deg);
+    color: white;
+    width: 50%;
+}
+
+.globo img {
+    width: 100%;
+}
+
+.work-info-personaje {
+    position: relative;
+    grid-area: info-img;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px;
+}
+
+.work-info-personaje img {
+    width: 100%;
+    height: 100%;
+}
+
+.wk-projects {
+    position: relative;
+    top: -2em;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url('../components/assets/img/Fondo_Kapta/Fondo05.png') no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    padding: 20em 10px 80% 10px;
+}
+
+.wk-projects p {
+    font-size: 2em;
+    margin: 30px;
+    text-align: center;
+    color: #FFC9A2;
+}
+
+.wk-projects .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.wk-projects .projects img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
 
 
 @media (max-width: 768px) {
@@ -53,10 +373,12 @@
     }
 
     .kh-texto {
+        display: block;
         padding: 20px;
         text-align: center;
         font-size: .9em;
         color: #FFC9A2;
+        width: 100%;
     }
 
     .kh-image {
@@ -66,7 +388,7 @@
         grid-template-areas: ". . b1 b2 b3 b4 b5 . .";
         position: relative;
         top: 80%;
-        z-index: -1;
+        z-index: 1;
     }
 
     .b1 {
@@ -112,15 +434,21 @@
     /* mobile-team */
 
     .team {
+        position: relative;
+	    top: 0;
+	    z-index: 1;
         display: grid;
-        grid-auto-rows: 70% 1fr;
+        grid-template-rows: 70% 1fr;
         background: url('../components/assets/img/Fondo_Kapta/Fondo03.png') no-repeat center center;
         background-size: cover;
         height: 100vh;
-        width: 100%
+        width: 100%;
+	    align-items: none;
     }
 
     .team-bg-form {
+        position: static;
+        top: 0;
         display: grid;
         background: url('../components/assets/img/Fondo_Kapta/Fondo06.png') no-repeat center center;
         background-size: cover;
@@ -130,24 +458,34 @@
     }
 
     .team-image {
+        position: static;
+        top: 0;
         display: flex;
         height: 70%;
         justify-self: center;
     }
 
     .team-text-container {
+        position: static;
+        top: 0;
         display: flex;
+        justify-content: none;
         align-self: center;
     }
 
     .team-text-container p {
+        display: block;
         text-align: center;
         font-size: .9em;
         color: #FFC9A2;
+        width: auto;
+        padding: 0;
     }
 
     /* mobile-work */
     .work {
+        position: static;
+        top: 0;
         display: grid;
         grid-template-rows: 150px 100px 1fr;
         grid-template-columns: 1fr;
@@ -171,11 +509,14 @@
     }
 
     .work-buttons {
+        position: static;
+        left: 0;
         grid-area: button;
         display: flex;
         width: 100%;
         justify-content: space-around;
         align-items: center;
+        grid-gap: 0px;
     }
 
     .work-buttons img {
@@ -282,6 +623,8 @@
     }
 
     .wk-projects p {
+        font-size: 1em;
+        margin: 0;
         text-align: center;
         color: #FFC9A2;
     }
@@ -294,26 +637,6 @@
     .wk-projects .projects img {
         width: 100%;
         height: auto;
-    }
-
-    .contact {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        background: url('../components/assets/img/Fondo_Kapta/Fondo06.png') no-repeat center center;
-        background-size: cover;
-        height: 100%;
-        padding: 5em 10px;
-    }
-
-    .contact img {
-        width: 60%;
-    }
-
-    .contact p {
-        font-size: 1.1em;
-        color: black;
     }
 
     .footer {
@@ -351,3 +674,15 @@
 
 }
 
+
+@media (max-width: 350px) {
+    .kh-image {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: auto auto repeat(5, 50px) auto auto;
+        grid-template-areas: ". . b1 b2 b3 b4 b5 . .";
+        position: relative;
+        top: 35%;
+        z-index: 1;
+    }
+}

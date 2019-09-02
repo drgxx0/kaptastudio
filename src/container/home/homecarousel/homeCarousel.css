@@ -2,10 +2,11 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
-.container {
+.cr-container {
     height: 100vh;
     background: url('../../../components/assets/img/carrusel/bg.png') no-repeat center center;
     background-size: cover;
+    margin: 0px;
 }
 
 .slide-container {
@@ -26,7 +27,7 @@
   }
 
   @media (max-width: 768px) {
-      .container {
+      .cr-container {
           display: grid;
           grid-template-rows: 100px 1fr auto;
           grid-template-columns: 1fr;
@@ -57,8 +58,8 @@
       }
 
       .each-fade .image-container img {
-        height: 350px;
-        width: auto;
+        width: 1fr;
+        height: auto;
       }
 
       .react-slideshow-container + div.indicators {
