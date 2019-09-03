@@ -1,7 +1,5 @@
-.home {
+.home {  
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: flex-end;
-    grid-template-areas: 
-    ". character";
+    grid-template-areas: "carr chara"
 }

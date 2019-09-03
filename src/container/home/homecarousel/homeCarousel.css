@@ -2,18 +2,25 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
-
-.react-slideshow-container {
-    height: 50em;
-    width: 100em;
+.cr-container {
+    grid-area: carr;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
     background: url('../../../components/assets/img/carrusel/bg.png') no-repeat center center;
     background-size: cover;
-    left: 10px;
-  }
+    margin: 0px;
+}
 
-  .logo-mobile {
-      visibility: hidden;
-  }
+.logo-mobile {
+  height: 100%;
+}
+
+.slide-container {
+  width: 100vw;
+  height: 1500px;
+}
 
   @media (max-width: 768px) {
       .cr-container {

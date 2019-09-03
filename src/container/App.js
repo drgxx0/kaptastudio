@@ -46,7 +46,7 @@ function App() {
 
         {/*know who */}
 
-        <img className='arco-superior' src={require('components/assets/img/Fondo_Kapta/Fondo02.png')} alt='' />
+        {<img className='arco-superior' src={require('components/assets/img/Fondo_Kapta/Fondo02.png')} alt='' />}
         <div className='knowhow'>
           <div className='kh-logo-container'>
             <img className='iso' src={require('components/assets/img/KnowHow/Isotipo_Kapta.png')} alt='' />
@@ -91,7 +91,9 @@ function App() {
 
         <div className='team'>
           <div className='team-bg-form'>
-            <img className='team-image' src={require('components/assets/img/Team/team-img.png')} alt='' />
+            <div className='team-image'>
+              <img src={require('components/assets/img/Team/team-img.png')} alt='' />
+            </div>
           </div>
           <div className='team-text-container'>
               <p>

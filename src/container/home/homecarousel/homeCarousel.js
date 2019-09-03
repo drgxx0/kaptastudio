@@ -47,8 +47,9 @@ const HomeCarousel = ({ setCharacter, setEffect, effect }) => {
     return (
         <React.Fragment>
             <div className='cr-container'>
-                {mobile ? 
-                    <img className='logo-mobile' src={require("components/assets/img/carrusel/logo_kapta.png")} alt='' /> : null}
+                {mobile ? <div className='logo-mobile'>
+                    <img src={require("components/assets/img/carrusel/logo_kapta.png")} alt='' />
+                </div> : null}
                 <div className="slide-container">
                     <Fade {...fadeProperties}>
                         <div className="each-fade">

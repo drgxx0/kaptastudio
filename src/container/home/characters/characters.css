@@ -1,9 +1,9 @@
 
 
 .character {
-    grid-area: character;
+    grid-area: chara;
     align-self: end;
-    height: 80% !important; 
+    height: 100% !important; 
     width: auto;
 }
 
