@@ -29,7 +29,7 @@ const Characters = ({ character, effect, setEffect }) => {
     return (
         <React.Fragment>
             <Fade when={effect} duration={800} delay={200}>
-                <img className='character' src={require(`components/assets/img/personajes/P${character}.png`)} alt='branding-personaje' style={{position: fixed ? 'fixed' : 'absolute', left: 'auto', right: '0px', zIndex: '100'}} />
+                <img className='character' src={require(`components/assets/img/personajes/P${character}.png`)} alt='branding-personaje' style={{position: fixed ? 'absolute' : 'absolute', left: 'auto', right: '0vw', top: 'auto', bottom: '0px', zIndex: '100'}} />
             </Fade>
         </React.Fragment>
     )

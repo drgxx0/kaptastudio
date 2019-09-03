@@ -2,24 +2,13 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
-.cr-container {
-    height: 100vh;
+
+.react-slideshow-container {
+    height: 50em;
+    width: 100em;
     background: url('../../../components/assets/img/carrusel/bg.png') no-repeat center center;
     background-size: cover;
-    margin: 0px;
-}
-
-.slide-container {
-    height: 100vh;
-}
-  
-  .each-fade .image-container img {
-    width: 100vw;
-    height: auto;
-  }
-
-  .react-slideshow-container + div.indicators {
-      margin-top: -60px;
+    left: 10px;
   }
 
   .logo-mobile {

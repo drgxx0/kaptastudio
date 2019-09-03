@@ -12,8 +12,10 @@ const Home = () => {
 
     return (
         <React.Fragment>
+            <div className='home'>
             <Characters character={character} setCharacter={setCharacter} effect={effect} setEffect={setEffect} />
             <HomeCarousel setCharacter={setCharacter} setEffect={setEffect} effect={effect} />
+            </div>
         </React.Fragment>
     )
 }
